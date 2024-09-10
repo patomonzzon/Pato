@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+        <style>
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(18, 248, 237);
+        }
+
+        #header {
+            margin: none;
+            background-color: #434343;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .nav li a {
+            background-color: rgb(236, 18, 18);
+            color: lavenderblush;
+            width: 200px;
+            text-decoration: none;
+            padding: 20px 25px;
+            display: block;
+            font-size: 20px;
+            border: 2px solid rgb(10, 10, 10);
+        }
+
+        .nav li a:hover {
+            background-color: rgb(243, 109, 236);
+        }
+
+        .nav > li {
+            float: left; 
+        }
+
+        .nav li ul {
+            display: none; 
+            position: absolute;
+            min-width: 200px;
+        }
+
+        .nav li:hover > ul {
+            display: block;
+        }
+
+        .nav li ul li {
+            position: relative;
+
+        }
+
+        .nav li ul li ul {
+            right: -200px;
+            top: 0px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            padding: 10px 0px;
+        }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="header">
+
+            <ul class="nav">
+                <li><a href="ESPECIALES/">ESPECIALES</a></li>
+
+                <li><a href="html/">HTML</a>
+                    <ul>
+                        <li><a href="html/ejer01PreguntasHTTP/">Preguntas</a></li>
+                        <li><a href="html/ejer02Tablas/">Tablas</a></li>
+                        <li><a href="html/ejer03Formularios/">Formulario</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="css/">CSS</a>
+                    <ul>
+                        <li><a href="css/cssParte1/">Parte 1</a>
+                            <ul>
+                                <li><a href="css/cssParte1/css10DivsEnPila/">Divs en pila</a></li>
+                                <li><a href="css/cssParte1/css11DivsEnFila/">Divs en fila</a></li>
+                                <li><a href="css/cssParte1/css21DivsInternosAbsolutos/">Divs internos absolutos</a></li>
+                                <li><a href="css/cssParte1/css20DivsInternosRelativos/">Divs internos relativos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="css/cssParte2/">Parte 2</a>
+                            <ul>
+                                <li><a href="css/cssParte2/css1Formulario/">Formulario</a></li>
+                                <li><a href="css/cssParte2/css2Tablas/">Tabla</a></li>
+                                <li><a href="css/cssParte2/css3LayoutBasico/">Layout basico</a></li>
+                                <li><a href="css/cssParte2/css4LayoutResponsivo/">Layout responsivo</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="">PHP</a></li>
+                <li><a href="">JSCRIPT</a>
+                    <ul>
+                        <li><a href="JS/js01_1_Sentencias/">Sentencias</a></li>
+                        <li><a href="JS/js01_2_Debuggers/">Debuggers</a></li>
+                        <li><a href="JS/js02_ComandoEnEvento/">Comando en evento</a></li>
+                        <li><a href="JS/js03_1_VariablesSimples/">Variables simples</a></li>
+                        <li><a href="JS/js03_5_Alcances/">Alcances</a></li>
+                        <li><a href="JS/js03_6_Arreglos/">Arreglos</a></li>
+                        <li><a href="">Operaciones</a>
+                            <ul>
+                                <li><a href="JS/js04_1_OperacionesSobreInput/">Operaciones sobre input</a></li>
+                                <li><a href="JS/js04_2_OperacionesEntreInputs/">Operaciones entre inputs</a></li>
+                            </ul>
+                        </li> 
+                        <li> <a href="">Funciones</a>
+                            <ul>
+                                <li><a href="JS/js04_3_FuncionesCompartidas/">Funciones compartidas</a></li>
+                                <li><a href="JS/js04_5_FuncionFlecha/">Funcion flecha</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="JS/js05_1_Location/">Location</a></li>
+                        <li><a href="JS/js05_3_FormConfirmacion/">Form de confirmacion</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    </body>
+
+    <footer>
+        <h1>Datos del alumno</h1>
+        <address>
+            Patricio Ezequiel Monzon <br />
+            <a href="mailto:patricio.monzon@comunidad.ub.edu.ar" target="_blank"> <br />
+                patricio.monzon@comunidad.ub.edu.ar    
+            </a>
+        </address>
+    </footer>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #contenedor {
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #display {
+            background-color: rgb(202, 99, 99);
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        #teclado {
+            background-color: rgb(224, 32, 32);
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-bottom: 2%;
+        }
+        button {
+            width: 170px;
+            height: 40px;
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="contenedor">
+
+    <div id="display">0</div>
+
+    <div id="teclado">
+
+        <div class="row">
+            <button onclick="agregar(1)">1</button>
+            <button onclick="agregar(2)">2</button>
+            <button onclick="agregar(3)">3</button>
+        </div>
+        <div class="row">
+            <button onclick="agregar(4)">4</button>
+            <button onclick="agregar(5)">5</button>
+            <button onclick="agregar(6)">6</button>
+        </div>
+        <div class="row">
+            <button onclick="agregar(7)">7</button>
+            <button onclick="agregar(8)">8</button>
+            <button onclick="agregar(9)">9</button>
+        </div>
+        <div class="row">
+            <button onclick="sumar()">+</button>
+            <button onclick="mostrarAcumulador()">Muestra Acumulador</button>
+        </div>
+        <div class="row">
+            <button onclick="borrarAcumulador()">Borra Acumulador</button>
+            <button onclick="borrarDisplay()">Borra Display</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    let acumulador = 0;
+    let displayValue = "";
+
+    function agregar(num) {
+        displayValue += num;
+        document.getElementById('display').textContent = displayValue;
+    }
+
+    function sumar() {
+        acumulador += parseFloat(displayValue) || 0;
+        displayValue = "";
+        document.getElementById('display').textContent = 0;
+    }
+
+    function mostrarAcumulador() {
+        alert("Acumulador: " + acumulador);
+    }
+
+    function borrarAcumulador() {
+        acumulador = 0;
+        alert("Acumulador borrado");
+    }
+
+    function borrarDisplay() {
+        displayValue = "";
+        document.getElementById('display').textContent = 0;
+    }
+
+</script>
+
+</body>
+</html>

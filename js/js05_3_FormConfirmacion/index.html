@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Confirmación</title>
+    <style>
+
+        .cajaForm {
+            width: 60%;
+            background-color: rgb(247, 8, 8);
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cajaForm">
+
+        <h2>Formulario</h2>
+        <form id="miFormulario" action="respuesta.html" method="get" onsubmit="return confirmarEnvio()">
+            
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+            
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetear</button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        function confirmarEnvio() {
+            return confirm("¿Estás seguro de que deseas enviar el formulario?");
+        }
+
+    </script>
+
+</body>
+</html>
+

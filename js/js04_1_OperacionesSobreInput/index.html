@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones sobre input</title>
+</head>
+<body>
+    
+    <h1>Introducir un valor en el cuadro de texto y luego probar los botones.</h1>
+
+    <input type="text" id="caja">
+
+    <button id="muestraValor">Valor</button>
+    <button id="suma">Suma 1</button>
+    <button id="elevadoCuadrado">x^2</button>
+    <button id="multiplica">Multiplica * 2</button>
+    <button id="elevadoEquis">2^x</button>
+
+    <script>
+
+        document.getElementById("muestraValor").addEventListener('click', function() {
+            alert(document.getElementById("caja").value);
+        });
+
+        document.getElementById("suma").addEventListener('click', function() {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = valor + 1;
+        });
+
+        document.getElementById("elevadoCuadrado").addEventListener('click', function() {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = Math.pow(valor, 2);
+        });
+
+        document.getElementById("multiplica").addEventListener('click', function() {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = valor * 2;
+        });
+
+        document.getElementById("elevadoEquis").addEventListener('click', function() {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = Math.pow(2, valor);
+        });
+
+    </script>
+
+</body>
+</html>
